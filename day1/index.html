@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNotes</title>
+  </head>
+  <body>
+    <header>
+      <h1>QuickNotes</h1>
+      <p>Capture ideas before they disappear.</p>
+      <nav aria-label="Main navigation">
+        <a href="#add-note">Add a note</a>
+        <a href="#your-notes">Your notes</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="add-note">
+        <h2>Add a note</h2>
+        <form id="note-form">
+          <label for="note-input">New note</label>
+          <input
+            type="text"
+            id="note-input"
+            name="note"
+            placeholder="Type a note..."
+            required
+          />
+          <button type="submit">Add Note</button>
+        </form>
+      </section>
+
+      <section id="your-notes">
+        <h2>Your notes</h2>
+        <p id="note-count">You have 2 notes.</p>
+        <ul id="notes-list">
+          <li>Revise HTML forms</li>
+          <li>Push my code to GitHub</li>
+        </ul>
+      </section>
+
+      <section id="about">
+        <h2>About QuickNotes</h2>
+        <p>
+          QuickNotes is a simple note-taking application designed to help you
+          capture ideas and reminders quickly.
+        </p>
+        <p>
+          This page was built as part of the Web Foundations course using
+          semantic HTML.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
+    </footer>
+  </body>
+</html>
