@@ -1,0 +1,224 @@
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: #8e0000;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 8px 0 16px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #650000;
+  transform: translateY(-2px);
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* White card sections */
+section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Features grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  background-color: #fffbe6;
+  border-left: 4px solid #0ba184;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+/* Add note form */
+#note-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: bold;
+}
+
+#note-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Buttons */
+button {
+  background-color: #0ba184;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #088a70;
+  transform: translateY(-2px);
+}
+
+/* Notes list */
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+#notes-list li {
+  background-color: #fffbe6;
+  border-left: 4px solid #0ba184;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* Keyboard shortcuts table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f6f8;
+}
+
+/* Feedback form */
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#feedback-form label {
+  font-weight: bold;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#feedback-form textarea {
+  resize: vertical;
+}
+
+#feedback-form button {
+  width: fit-content;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #777;
+  padding: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 10px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  main {
+    margin: 16px auto;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  #note-form {
+    flex-direction: column;
+  }
+
+  #note-input,
+  #note-form button {
+    width: 100%;
+  }
+}
