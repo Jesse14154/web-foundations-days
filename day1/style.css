@@ -1,0 +1,249 @@
+/* ========================================
+   QUICKNOTES - DAY 2 CSS
+   ======================================== */
+
+
+/* 1. RESET
+   Makes sizing predictable across browsers.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* 2. BODY
+   Controls the overall page appearance.
+*/
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+
+/* 3. HEADER
+   Styles the top section of the website.
+*/
+header {
+  background-color: #8e0000;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+
+/* Navigation */
+nav {
+  margin-top: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* 4. MAIN CONTENT
+   Centres the content and prevents it
+   from becoming too wide.
+*/
+main {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+
+/* 5. SECTIONS
+   Makes each section look like a card.
+*/
+section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 6. NOTE FORM
+   Flexbox puts the input and button
+   next to each other.
+*/
+#note-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: bold;
+}
+
+#note-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+
+/* 7. BUTTONS
+*/
+button {
+  background-color: #0ba184;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #088a70;
+  transform: translateY(-2px);
+}
+
+
+/* 8. NOTES LIST
+*/
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note {
+  background-color: #fffbe6;
+  border-left: 4px solid #0ba184;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+
+/* 9. FOOTER
+*/
+footer {
+  text-align: center;
+  color: #777;
+  padding: 16px;
+}
+
+
+/* 10. ABOUT PAGE LISTS
+*/
+main ol,
+main ul {
+  padding-left: 24px;
+}
+
+
+/* 11. TABLE
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f2f4;
+  font-weight: bold;
+}
+
+
+/* 12. FEEDBACK FORM
+*/
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#feedback-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#feedback-form label {
+  font-weight: bold;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+#feedback-form textarea {
+  resize: vertical;
+}
+
+
+/* 13. FOCUS EFFECT
+   Makes it easier to see which form
+   field is currently selected.
+*/
+input:focus,
+textarea:focus {
+  outline: 2px solid #0ba184;
+  outline-offset: 2px;
+}
+
+
+/* 14. RESPONSIVE DESIGN
+   On small screens, stack the note
+   input and button vertically.
+*/
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+  }
+
+  #note-input,
+  #note-form button {
+    width: 100%;
+  }
+
+  main {
+    margin-top: 16px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 4px 6px;
+  }
+}
