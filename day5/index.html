@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5 - User Directory</title>
+
+  <script src="users.js" defer></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f7;
+      color: #222;
+    }
+
+    main {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 25px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #176b87;
+    }
+
+    button,
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      border: none;
+      border-radius: 5px;
+      background-color: #176b87;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      margin: 10px 0 20px;
+    }
+
+    #status {
+      font-weight: bold;
+    }
+
+    #users-list {
+      padding-left: 20px;
+    }
+
+    #users-list li {
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #f7f9fa;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Day 5: User Directory</h1>
+    <p>Load users from a server and search their details.</p>
+
+    <button id="load-users" type="button">
+      Load Users
+    </button>
+
+    <p id="status">Click "Load Users" to get users from the server.</p>
+
+    <section>
+      <h2>Search Users</h2>
+
+      <label for="filter-input">Filter by name</label>
+      <input
+        type="text"
+        id="filter-input"
+        placeholder="Type a user's name..."
+      >
+    </section>
+
+    <section>
+      <h2>Users</h2>
+      <ul id="users-list"></ul>
+    </section>
+  </main>
+</body>
+</html>
